@@ -1,12 +1,16 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class BookShelf {
 
+    private List<String> bookShelf;
+
     public List<String> books() {
-        return Collections.emptyList();
+        this.bookShelf = new ArrayList<String>();
+        return this.bookShelf;
     }
 
 }
