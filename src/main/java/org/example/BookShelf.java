@@ -1,9 +1,7 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class BookShelf {
 
@@ -15,6 +13,11 @@ public class BookShelf {
 
     public void add(String... booksToAdd) {
         Arrays.stream(booksToAdd).forEach(books::add);
+    }
+
+    public List<String> arrange() {
+//        books.sort(Comparator.naturalOrder());
+        return books.stream().sorted().collect(Collectors.toList());
     }
 
 }
